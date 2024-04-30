@@ -1,0 +1,82 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("Norse-Bold.otf") format("truetype");
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.left-container {
+  flex-grow: 1;
+  background-image: url("https://images.unsplash.com/photo-1533683083439-1a776a5653cb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.left-container > p {
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.left-container > p > a {
+  color: white;
+}
+
+.right-container {
+  flex-grow: 3;
+  min-width: 500px;
+  height: 100%;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.title-container > a > img {
+  width: 150px;
+}
+
+.title-container > a {
+  font-family: "Norse";
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+}
+
+.title-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30%;
+  padding: 1rem;
+}
+
+.box {
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+}
