@@ -5,6 +5,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media screen and (max-width: 400px) {
+  :root {
+    --rem: 12px !important;
+  }
+}
+
 @font-face {
   font-family: "Norse";
   src: url("Norse-Bold.otf") format("truetype");
@@ -18,7 +24,7 @@ body {
 }
 
 .left-container {
-  flex-grow: 1;
+  flex-grow: 2;
   background-image: url("https://images.unsplash.com/photo-1533683083439-1a776a5653cb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-position: center;
@@ -45,12 +51,16 @@ body {
 }
 
 .right-container {
-  flex-grow: 3;
+  flex: 5;
   min-width: 500px;
   height: 100%;
   background-color: black;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title-container > a > img {
@@ -79,4 +89,76 @@ body {
   background-color: white;
   position: absolute;
   border-radius: 50%;
+}
+
+.form-container {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  position: relative;
+}
+
+.form-container > div {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.form-container > div > h1 {
+  color: white;
+  position: absolute;
+  text-shadow: 2px 2px blue;
+  top: -8rem;
+  font-size: 3rem;
+}
+
+.form-container > div > form {
+  grid-template-columns: auto auto;
+  display: grid;
+  row-gap: 3rem;
+  column-gap: 6rem;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.4rem;
+  width: clamp(86px, 13.3vw, 256px);
+  border: 2px solid gray;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+.text-input:focus {
+  border: 2px solid rgb(0, 102, 255);
+  outline: none;
+}
+
+.text-input:invalid:focus {
+  border: 2px solid red;
+  outline: none;
+}
+
+.password-input {
+  outline: none;
+}
+
+#submit-btn {
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  font-weight: 800;
+  border-radius: 8px;
+  z-index: 1;
+  margin-top: 3rem;
 }
