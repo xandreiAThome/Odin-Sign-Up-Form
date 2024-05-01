@@ -119,12 +119,25 @@ body {
 }
 
 .form-container > div > form {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  display: grid;
+  display: flex;
   width: 100%;
-  row-gap: 3rem;
+  flex-wrap: wrap;
   justify-items: center;
-  padding: clamp(12px, 5vw, 6rem);
+  align-items: center;
+  padding-top: clamp(12px, 5vw, 6rem);
+  padding-bottom: clamp(12px, 5vw, 6rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form-container > div > form > div {
+  flex: 1 0 40%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 6px 1rem 6px;
+  align-items: center;
 }
 
 input {

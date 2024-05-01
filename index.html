@@ -37,44 +37,45 @@
           <div><h1>Sign Up Now!</h1>
           <form action="" method="" id="form" onsubmit="return false">
             <div>
-              <label for="first_name">FIRST NAME</label><br /><input
+              <div><label for="first_name">FIRST NAME</label><br /><input
                 type="text"
                 id="first_name"
                 name="first_name"
                 required
                 minlength="1" class="text-input"
-              />
+              /></div>
+              
             </div>
             <div>
-              <label for="last_name">LAST NAME</label><br /><input
+              <div><label for="last_name">LAST NAME</label><br /><input
                 type="text"
                 id="last_name"
                 name="last_name"
                 required
                 minlength="1" class="text-input"
-              />
+              /></div>
+              
             </div>
-            <div>
-              <label for="email">EMAIL</label><br /><input
+            <div><div><label for="email">EMAIL</label><br /><input
                 type="email"
                 id="email"
                 name="email"
                 title="Please enter a valid email" class="text-input"
                 required
-              />
+              /></div>
+              
             </div>
-            <div>
-              <label for="phone_number">PHONE NUMBER</label><br /><input
+            <div><div><label for="phone_number">PHONE NUMBER</label><br /><input
                 type="text"
                 id="phone_number"
                 name="phone_number"
                 required
                 pattern="\d{11}"
                 title="Only accepts 11 digit numbers" class="text-input"
-              />
+              /></div>
+              
             </div>
-            <div>
-              <label for="password">PASSWORD</label><br /><input
+            <div><div><label for="password">PASSWORD</label><br /><input
                 type="password"
                 id="password"
                 name="password" class="text-input"
@@ -82,15 +83,17 @@
                 pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                 title="Password must contain atleast 8 characters and a number"
                 required
-              />
+              /></div>
+              
             </div>
             <div>
-              <label for="confirm-password">CONFIRM PASSWORD</label><br /><input
+              <div><label for="confirm-password">CONFIRM PASSWORD</label><br /><input
                 type="password"
                 id="confirm-password"
                 name="confirm-password" class="text-input"
                 required
-              />
+              /></div>
+              
             </div></div>
           
             <button id="submit-btn" class="submit-class" type="submit">Create Account</button>
