@@ -159,8 +159,9 @@ label {
   outline: none;
 }
 
-#submit-btn {
-  background-color: rgb(70, 177, 177);
+.submit-class {
+  background-color: #1c2f55;
+  box-shadow: 1px 2px 3px black;
   border: none;
   color: white;
   font-size: 1rem;
@@ -169,4 +170,68 @@ label {
   border-radius: 8px;
   z-index: 1;
   margin-top: 3rem;
+  transition: transform 0.2s;
+}
+
+.submit-class:active {
+  transform: scale(0.96);
+}
+
+#acc-created {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  width: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("layered-peaks-haikei.svg");
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: rgb(0, 0, 94);
+}
+
+#acc-created::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-active {
+  animation: show 1s ease forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+.modal-close {
+  animation: close 1s ease;
+}
+
+@keyframes close {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+
+#app-created > h1 {
+  text-align: center;
 }

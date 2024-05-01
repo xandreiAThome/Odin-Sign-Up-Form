@@ -35,7 +35,7 @@
       <div class="right-container">
         <div class="form-container">
           <div><h1>Sign Up Now!</h1>
-          <form action="" method="">
+          <form action="" method="" id="form" onsubmit="return false">
             <div>
               <label for="first_name">FIRST NAME</label><br /><input
                 type="text"
@@ -80,7 +80,7 @@
                 name="password" class="text-input"
                 minlength="8"
                 pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
-                title="Password must contain atleast one number"
+                title="Password must contain atleast 8 characters and a number"
                 required
               />
             </div>
@@ -93,10 +93,12 @@
               />
             </div></div>
           
-            <button id="submit-btn" type="submit">Create Account</button>
+            <button id="submit-btn" class="submit-class" type="submit">Create Account</button>
           </form>
         </div>
       </div>
     </div>
+    <dialog id="acc-created"><div class="modal-container"><h1>Thank you for signing up!</h1>
+    <button id="close-modal" class="submit-class">Your welcome</button></div></dialog>
   </body>
 </html>

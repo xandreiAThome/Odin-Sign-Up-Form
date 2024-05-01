@@ -2,6 +2,9 @@ const rightContainer = document.querySelector(".right-container");
 const submitBtn = document.getElementById("submit-btn");
 const confirmPass = document.getElementById("confirm-password");
 const password = document.getElementById("password");
+const accCreated = document.getElementById("acc-created");
+const closeModal = document.getElementById("close-modal");
+const form = document.getElementById("form");
 
 //detects if current browser is mobile
 window.mobileAndTabletCheck = function () {
@@ -57,9 +60,32 @@ if (!isMobile) {
 
 // show popup if confirm password input is invalid
 confirmPass.addEventListener("input", (e) => {
-  if (e.target.value == password.value && password.getAttribute("isvalid")) {
+  if (e.target.value == password.value && password.checkValidity()) {
     e.target.setCustomValidity("");
   } else {
     e.target.setCustomValidity("Password does not match");
   }
+});
+
+// create acc
+submitBtn.addEventListener("click", (e) => {
+  if (form.checkValidity()) {
+    accCreated.showModal();
+    accCreated.classList.add("modal-active");
+
+    form.reset();
+  }
+});
+
+// close the thankyou msg
+closeModal.addEventListener("click", () => {
+  accCreated.classList.remove("modal-active");
+  accCreated.classList.add("modal-close");
+
+  accCreated.addEventListener("animationend", () => {
+    if (accCreated.classList.contains("modal-close")) {
+      accCreated.close();
+      accCreated.classList.remove("modal-close");
+    }
+  });
 });
