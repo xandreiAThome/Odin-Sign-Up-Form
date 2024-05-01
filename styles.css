@@ -24,16 +24,24 @@ body {
 }
 
 .left-container {
-  flex-grow: 2;
+  flex: 1 0 35%;
   background-image: url("https://images.unsplash.com/photo-1533683083439-1a776a5653cb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
   height: 100%;
+  min-width: 300px;
 }
 
-.left-container > p {
+.left-container > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.left-container > div > p {
   text-align: center;
   color: white;
   position: absolute;
@@ -46,12 +54,12 @@ body {
   font-weight: 300;
 }
 
-.left-container > p > a {
+.left-container > div > p > a {
   color: white;
 }
 
 .right-container {
-  flex: 5;
+  flex: 3 0 65%;
   min-width: 300px;
   height: 100%;
   background: linear-gradient(0deg, #4266b8 0%, #1b4ab6 30%, #182848 70%);
@@ -76,13 +84,13 @@ body {
 }
 
 .title-container {
+  position: absolute;
+  width: 100%;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.5);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30%;
-  padding: 1rem;
+  top: 20%;
 }
 
 .box {
