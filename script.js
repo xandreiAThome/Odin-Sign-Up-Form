@@ -1,4 +1,7 @@
 const rightContainer = document.querySelector(".right-container");
+const submitBtn = document.getElementById("submit-btn");
+const confirmPass = document.getElementById("confirm-password");
+const password = document.getElementById("password");
 
 //detects if current browser is mobile
 window.mobileAndTabletCheck = function () {
@@ -51,3 +54,12 @@ if (!isMobile) {
     }
   });
 }
+
+// show popup if confirm password input is invalid
+confirmPass.addEventListener("input", (e) => {
+  if (e.target.value == password.value && password.getAttribute("isvalid")) {
+    e.target.setCustomValidity("");
+  } else {
+    e.target.setCustomValidity("Password does not match");
+  }
+});

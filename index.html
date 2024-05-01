@@ -77,15 +77,18 @@
               <label for="password">PASSWORD</label><br /><input
                 type="password"
                 id="password"
-                name="password" class="password-input"
+                name="password" class="text-input"
+                minlength="8"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                title="Password must contain atleast one number"
                 required
               />
             </div>
             <div>
-              <label for="confirm_password">CONFIRM PASSWORD</label><br /><input
+              <label for="confirm-password">CONFIRM PASSWORD</label><br /><input
                 type="password"
-                id="confirm_password"
-                name="confirm_password" class="password-input"
+                id="confirm-password"
+                name="confirm-password" class="text-input"
                 required
               />
             </div></div>

@@ -52,9 +52,9 @@ body {
 
 .right-container {
   flex: 5;
-  min-width: 500px;
+  min-width: 300px;
   height: 100%;
-  background-color: black;
+  background: linear-gradient(0deg, #4266b8 0%, #1b4ab6 30%, #182848 70%);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -105,7 +105,6 @@ body {
 .form-container > div {
   background-color: rgba(255, 255, 255, 0.1);
   display: flex;
-  padding: 4rem;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -120,16 +119,19 @@ body {
 }
 
 .form-container > div > form {
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   display: grid;
+  width: 100%;
   row-gap: 3rem;
-  column-gap: 6rem;
+  justify-items: center;
+  padding: clamp(12px, 5vw, 6rem);
 }
 
 input {
   font-size: 1rem;
   padding: 0.4rem;
-  width: clamp(86px, 13.3vw, 256px);
+  display: inline;
+  width: clamp(200px, 15vw, 300px);
   border: 2px solid gray;
 }
 
@@ -147,12 +149,18 @@ label {
   outline: none;
 }
 
-.password-input {
+.pass-input:focus {
+  border: 2px solid red;
+  outline: none;
+}
+
+.confirm-input:focus {
+  border: 2px solid blue;
   outline: none;
 }
 
 #submit-btn {
-  background-color: darkcyan;
+  background-color: rgb(70, 177, 177);
   border: none;
   color: white;
   font-size: 1rem;
